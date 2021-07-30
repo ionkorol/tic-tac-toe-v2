@@ -1,0 +1,9 @@
+export { default as checkWin } from "./checkWin";
+export { default as checkDraw } from "./checkDraw";
+export { default as winnerSet } from "./winnerSet";
+export { default as boardReset } from "./boardReset";
+export { default as pieceRemove } from "./pieceRemove";
+export { default as pieceSelect } from "./pieceSelect";
+export { default as turnSet } from "./turnSet";
+export { default as cellSet } from "./cellSet";
+export { default as winningCombinationSet } from "./winningCombinationSet";

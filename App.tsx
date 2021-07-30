@@ -1,21 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { NativeBaseProvider } from "native-base";
+import Navigation from "navigation";
+import React, { useState } from "react";
+import { Provider } from "react-redux";
+import store from "redux-store/store";
+import theme from "utils/theme";
+import AppLoading from "expo-app-loading";
+import { useFonts, Teko_500Medium } from "@expo-google-fonts/teko";
 
 export default function App() {
+  const [appIsReady, setAppIsReady] = useState(false);
+
+  const [fontsLoaded] = useFonts({ Teko_500Medium });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <NativeBaseProvider theme={theme}>
+        <NavigationContainer>
+          <Navigation />
+        </NavigationContainer>
+      </NativeBaseProvider>
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
