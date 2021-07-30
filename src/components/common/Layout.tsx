@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: any }) => {
     <Box flex={1} bgColor="secondary.500">
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{ flex: 1 }}>
-        <Box>{children}</Box>
+        <Box flex={1}>{children}</Box>
       </SafeAreaView>
     </Box>
   );

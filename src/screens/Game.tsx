@@ -69,51 +69,60 @@ const Game = () => {
 
   return (
     <Layout>
-      <VStack space={5} p={5} justifyContent="center">
+      <VStack flex={1} space={5} p={5} justifyContent="space-between">
         <Logo />
-        <HStack
-          justifyContent="space-between"
-          alignItems="center"
-          borderColor={turn === "blue" ? "blue.500" : "secondary.500"}
-          borderRadius={10}
-          borderWidth={1}
-          px={5}
-          height={20}
-        >
-          {[1, 2, 3, 4, 5, 6].map((size) => (
-            <Piece
-              data={{ side: "blue", size }}
-              onPress={() => handlePiecePress({ side: "blue", size })}
-              key={size}
-            />
-          ))}
-        </HStack>
-        <FlatList
-          data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
-          renderItem={({ item }) => (
-            <Cell id={item} onPress={() => handleCellPress(item)} />
-          )}
-          keyExtractor={(item) => item}
-          numColumns={3}
-        />
-        <HStack
-          p={5}
-          justifyContent="space-between"
-          alignItems="center"
-          borderColor={turn === "red" ? "red.500" : "secondary.500"}
-          borderRadius={10}
-          borderWidth={1}
-          px={5}
-          height={20}
-        >
-          {[1, 2, 3, 4, 5, 6].map((size) => (
-            <Piece
-              data={{ side: "red", size }}
-              onPress={() => handlePiecePress({ side: "red", size })}
-              key={size}
-            />
-          ))}
-        </HStack>
+        <VStack space={5}>
+          <HStack
+            justifyContent="space-between"
+            alignItems="center"
+            borderColor={turn === "blue" ? "blue.500" : "secondary.500"}
+            borderRadius={10}
+            borderWidth={1}
+            px={5}
+            height={20}
+          >
+            {[1, 2, 3, 4, 5, 6].map((size) => (
+              <Piece
+                data={{ side: "blue", size }}
+                onPress={() => handlePiecePress({ side: "blue", size })}
+                key={size}
+              />
+            ))}
+          </HStack>
+          <FlatList
+            data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
+            renderItem={({ item }) => (
+              <Cell id={item} onPress={() => handleCellPress(item)} />
+            )}
+            keyExtractor={(item) => item}
+            numColumns={3}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: "center",
+            }}
+            columnWrapperStyle={{
+              justifyContent: "space-between",
+            }}
+          />
+          <HStack
+            p={5}
+            justifyContent="space-between"
+            alignItems="center"
+            borderColor={turn === "red" ? "red.500" : "secondary.500"}
+            borderRadius={10}
+            borderWidth={1}
+            px={5}
+            height={20}
+          >
+            {[1, 2, 3, 4, 5, 6].map((size) => (
+              <Piece
+                data={{ side: "red", size }}
+                onPress={() => handlePiecePress({ side: "red", size })}
+                key={size}
+              />
+            ))}
+          </HStack>
+        </VStack>
         <Controls />
       </VStack>
       <ResultModal />
