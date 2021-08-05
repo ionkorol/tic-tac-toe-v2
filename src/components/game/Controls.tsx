@@ -1,5 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { boardReset, turnSet } from "lib/game";
+import { modalsShowInstructions } from "lib/modals";
 import { HStack, Icon, IconButton, Switch } from "native-base";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -20,12 +21,7 @@ const Controls = () => {
         icon={<Icon color="white" as={<Ionicons name="refresh" />} />}
         onPress={boardReset}
       />
-      {/* <IconButton
-        bgColor="red.700"
-        borderRadius={100}
-        _text={{ color: "white" }}
-        icon={<Icon color="white" as={<Ionicons name="refresh" />} />}
-      /> */}
+
       <Switch
         size="lg"
         offTrackColor="red.300"
@@ -39,7 +35,8 @@ const Controls = () => {
         bgColor="blue.700"
         borderRadius={100}
         color="white"
-        icon={<Icon color="white" as={<Ionicons name="settings" />} />}
+        icon={<Icon color="white" as={<Ionicons name="information" />} />}
+        onPress={() => modalsShowInstructions(true)}
       />
     </HStack>
   );

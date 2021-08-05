@@ -1,8 +1,11 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
-import { gameReducer } from "redux-store/reducers";
+import { gameReducer, modalsReducer } from "redux-store/reducers";
 import thunk from "redux-thunk";
 
-const rootReducer = combineReducers({ game: gameReducer });
+const rootReducer = combineReducers({
+  game: gameReducer,
+  modals: modalsReducer,
+});
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 

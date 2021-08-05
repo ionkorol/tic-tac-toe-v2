@@ -1,5 +1,11 @@
 import { Layout, Logo } from "components/common";
-import { Cell, Controls, Piece, ResultModal } from "components/game";
+import {
+  Cell,
+  Controls,
+  InstructionModal,
+  Piece,
+  ResultModal,
+} from "components/game";
 import {
   cellSet,
   checkDraw,
@@ -126,6 +132,7 @@ const Game = () => {
         <Controls />
       </VStack>
       <ResultModal />
+      <InstructionModal />
     </Layout>
   );
 };
