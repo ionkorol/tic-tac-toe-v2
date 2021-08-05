@@ -8,6 +8,15 @@
         "buildType": "development-client",
         "distribution": "internal"
       }
+    },
+    "android": {
+      "release": {
+        "buildType": "app-bundle"
+      },
+      "development": {
+        "buildType": "development-client",
+        "distribution": "internal"
+      }
     }
   }
 }
