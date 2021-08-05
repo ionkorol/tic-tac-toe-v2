@@ -17,8 +17,8 @@ const InstructionModal = () => {
             - Each piece is valued differently with their value displayed on top
           </Text>
           <Text>
-            - You can place a higer value piece on top of your opponents piece,
-            effectevly controling the square
+            - You can place a higer value piece on top of your opponent's piece,
+            effectively controlling the square
           </Text>
         </Modal.Body>
       </Modal.Content>
