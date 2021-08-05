@@ -13,20 +13,19 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "digital.korol.tic-tac-toe-v2",
-      "buildNumber": "2"
+      "buildNumber": "3"
     },
     "android": {
+      "package": "digital.korol.tttv2",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "digital.korol.tttv2"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
