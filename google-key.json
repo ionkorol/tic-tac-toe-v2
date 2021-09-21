@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pc-api-4951180782057625022-14",
+  "private_key_id": "135b4f6b3f6405c09d4a688d36bb0cb9c3b62e14",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCojiiwcqM+6oj7\nBZc583vVgAiKolY8PBd2vvqmtgnpTl7JkSH+38hN9m5/7PHyKe+1u/lHHR9DeoVK\nwgyyggS3+a54G3cMydewePOUWLOyO+/sHsMJ0ecglZdjgyVsaxBqG14PJJgtZKKl\n49QmndVT+YV3g4X6PKb5bvP9LW/qKl1KRgtIi5G8JWREWd8cGnXxoeJolKDmJNbM\nswsGACMiiviVYtZzFd34zYjOZv4dvPf05FnRoJ3lgSZmksZCT6tJZVCdoZQfW9vC\nk7RbzRrk34kuGzFdK1GC2MI+FYLtpnc/uV+IsqxVU+gaYBqJ8IY8tHsN5u/cwJ5I\nWJJKU3u3AgMBAAECggEAEp7hz9xaPHEcgN61Pimv3H4wc2BLtovM68ldV1106tlF\nj28BGm8Oac53lppOgDoxyRnjCAAnnATFBOU7Ed1bOBfVNl+SX09NDKnP/uttrpsA\nfk1HrqYJqofcGZo7YCbTwWUUlwer6BfeAAWTQlDdaFGAdRuKiYJ5z8R6H9YNLwkh\nBc5j8DYFjp0mekO+yY/qUuIDnRxTD9A/ESC7fNmxSVGX6qMqytpSRdBSBmNbPRQl\nEWDqK/XnpLBVWzyzcx3i3Zj+h/e6P2vAu3T45+k/7mPHu7zHZpJGUuq+RLP2sZv2\neluoSIygePdLj72H7J/sx8zqYCYW0M/fxCYAF8LVAQKBgQDiB20GLZsA8/9UVCI3\n+r8bwbIlexWUcbE/u8cyWVYIXeSx1OJRY36bHckZSRylGBDC4zMKvAxE11BcYVHu\nfUFxbgTOvrvYHKcvgpTIO0fWZDk8HWhsD2aHsbiy1kzgwaKmFbSk84n9zVZWv8CL\nMv602dlm7RD32mli6ubWwKef8QKBgQC+58iNN3DJMUgcH2DqRDIyxNtsn2zwTd0k\nK80iBibq2y1yKi/96utgRQDDlGASSd3qwtenc32XMh3Dq8ruZ/FxvhrGSrvKd5pc\nOZIlGD200Nqy6qJAzQCVla8m50fOYsxe8V5OYF71DTtbW/+/onoc7EWlECE/5dEh\nMs82qqn+JwKBgHwdXcWdt1bPpO4WgO/CVbyVIRCpxNDNmWoI37oLCk3v2Qu5fUj5\n3GSq92lWF0+kpleN0NJdLlOC9BK2MfpGd3Ak3Kj2XUmvejKBftdwjeLxB+i1sUhd\nMIzkjypMuMxWJ80RcC9/t89ROM7L3pvRNcHzOgjltoKTQXlaycU05xbRAoGAWQZ5\n7fDmtcw3lnXDmjvHNQm8UcFe6glFkTKj7LP1vhwL62tlCgJdVX2YR5yP2Ld9t5a5\nPquK69FBNBiO//KVE7fVgJclT9vKritizc2qKQIkmr70f0eaeCdfkMLWJ5bHO5dP\npTknzxsmjQowD8vTKl28dKc6+jNP/S1WmGWp9I0CgYAnZWd3yymSm0H9eQwgXTLi\nOPzkZoUzPMajkjFfJ4OK2r6z5z6DDrqgvTrmVaQsvZca3Kmf1O6Rx6QUb+d32OLQ\nD5sYuNGHGF0lvCrufxq+5kKILwJIpfCYyrzB8zhdqLnM4K2hHza9UkJ3foiRz/xa\nQLbD96LioUHrqlxBYvtvSw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "expo-picme-app@pc-api-4951180782057625022-14.iam.gserviceaccount.com",
+  "client_id": "110400987966527976935",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/expo-picme-app%40pc-api-4951180782057625022-14.iam.gserviceaccount.com"
+}

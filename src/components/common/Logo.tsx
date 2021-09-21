@@ -1,14 +1,12 @@
-import { Box, Heading, VStack } from "native-base";
+import { Box, Heading, HStack, VStack } from "native-base";
 import React from "react";
 
 const Logo = () => {
   return (
-    <VStack alignItems="center">
-      <Box height={30}>
-        <Heading>TIC TAC TOE</Heading>
-      </Box>
-      <Heading color="primary.500">REMASTERED</Heading>
-    </VStack>
+    <HStack space={3} justifyContent="center">
+      <Heading>TIC TAC TOE</Heading>
+      <Heading color="primary.500">2.0</Heading>
+    </HStack>
   );
 };
 

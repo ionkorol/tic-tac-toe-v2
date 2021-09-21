@@ -1,13 +1,17 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
-import { GameScreen } from "screens";
+import { DuoGameScreen, SoloGameScreen } from "screens";
 
 const Stack = createStackNavigator();
 
 const Navigation = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Game" component={GameScreen} />
+    <Stack.Navigator
+      initialRouteName="DuoGame"
+      screenOptions={{ headerShown: false }}
+    >
+      <Stack.Screen name="DuoGame" component={DuoGameScreen} />
+      <Stack.Screen name="SoloGame" component={SoloGameScreen} />
     </Stack.Navigator>
   );
 };

@@ -3,8 +3,10 @@ export interface BoardProp {
 }
 
 export interface PieceProp {
-  side: "red" | "blue";
-  size: number;
+  id: number;
+  value: number;
+  available: boolean;
+  side: GameSidesProp;
 }
 
 export type GameSidesProp = "red" | "blue";

@@ -1,17 +1,16 @@
 import { Ionicons } from "@expo/vector-icons";
-import { boardReset, turnSet } from "lib/game";
-import { modalsShowInstructions } from "lib/modals";
-import { HStack, Icon, IconButton, Switch } from "native-base";
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "redux-store/store";
+import { HStack, Icon, IconButton } from "native-base";
+import React from "react";
+import { boardReset } from "redux-store/slices/gameSlice";
+import { showInstructionsModal } from "redux-store/slices/modalSlice";
+import { useAppDispatch } from "redux-store/store";
 
 const Controls = () => {
-  const { turn } = useSelector((state: RootState) => state.game);
-  const handleSwitchTurn = () => {
-    boardReset();
-    turnSet(turn === "blue" ? "red" : "blue");
-  };
+  const dispatch = useAppDispatch();
+  // const handleSwitchTurn = () => {
+  //   boardReset();
+  //   turnSet(turn === "blue" ? "red" : "blue");
+  // };
 
   return (
     <HStack justifyContent="space-between" alignItems="center">
@@ -19,9 +18,9 @@ const Controls = () => {
         bgColor="primary.500"
         borderRadius={100}
         icon={<Icon color="white" as={<Ionicons name="refresh" />} />}
-        onPress={boardReset}
+        onPress={() => dispatch(boardReset())}
       />
-
+      {/* 
       <Switch
         size="lg"
         offTrackColor="red.300"
@@ -30,13 +29,13 @@ const Controls = () => {
         onThumbColor="blue.500"
         isChecked={turn === "blue" ? true : false}
         onToggle={() => handleSwitchTurn()}
-      />
+      /> */}
       <IconButton
         bgColor="blue.700"
         borderRadius={100}
         color="white"
         icon={<Icon color="white" as={<Ionicons name="information" />} />}
-        onPress={() => modalsShowInstructions(true)}
+        onPress={() => dispatch(showInstructionsModal(true))}
       />
     </HStack>
   );

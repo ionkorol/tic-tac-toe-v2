@@ -1,7 +1,4 @@
-import store from "redux-store/store";
 import { BoardProp } from "utils/interfaces";
-import winnerSet from "./winnerSet";
-import winningCombinationSet from "./winningCombinationSet";
 
 const checkSet = (set: number[], side: string, board: BoardProp) => {
   if (
@@ -14,11 +11,7 @@ const checkSet = (set: number[], side: string, board: BoardProp) => {
   return false;
 };
 
-const checkWin = () => {
-  const state = store.getState();
-
-  const { board } = state.game;
-
+const checkWin = (board: BoardProp) => {
   const sides = ["red", "blue"];
 
   for (const side of sides) {
@@ -36,11 +29,11 @@ const checkWin = () => {
     for (const winningCombination of winningCombinations) {
       const result = checkSet(winningCombination, side, board);
       if (result) {
-        winnerSet(side as "blue" | "red");
-        winningCombinationSet(winningCombination);
+        return { side, winningCombination };
       }
     }
   }
+  return false;
 };
 
 export default checkWin;

@@ -1,10 +1,9 @@
 import { Heading, Modal, Circle, VStack } from "native-base";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "redux-store/store";
+import { useAppSelector } from "redux-store/store";
 
 const ResultModal = () => {
-  const { winner } = useSelector((state: RootState) => state.game);
+  const { winner } = useAppSelector((state) => state.game);
   const [show, setShow] = useState(false);
 
   useEffect(() => {

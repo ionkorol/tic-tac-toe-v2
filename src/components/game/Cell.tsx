@@ -1,22 +1,36 @@
-import { FontAwesome5 } from "@expo/vector-icons";
-import { Pressable, Text, Circle, Icon } from "native-base";
-import React, { FC, useEffect, useRef } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "redux-store/store";
-import { PieceProp } from "utils/interfaces";
+import { Pressable, Text, Circle } from "native-base";
+import React, { FC } from "react";
+import { cellSet } from "redux-store/slices/gameSlice";
+import { useAppDispatch, useAppSelector } from "redux-store/store";
 
 interface Props {
   id: number;
-  onPress: () => void;
 }
 
 const Cell: FC<Props> = (props) => {
-  const { id, onPress } = props;
-  const { board, winningCombination } = useSelector(
-    (state: RootState) => state.game
+  const { id } = props;
+  const { winningCombination, selectedPiece, pieces } = useAppSelector(
+    (state) => state.game
   );
+  const data = useAppSelector((state) => state.game.board[id]);
 
-  const data = board[id] as PieceProp | null;
+  const dispatch = useAppDispatch();
+
+  const handlePress = () => {
+    if (!selectedPiece) {
+      return;
+    }
+
+    const selectedPieceData = pieces[selectedPiece];
+
+    // If cell contains same side piece
+    if (data && data.side === selectedPieceData.side) return;
+
+    // If cell contains piece with higher value
+    if (data && data.value >= selectedPieceData.value) return;
+
+    dispatch(cellSet({ id, data: selectedPieceData }));
+  };
 
   if (!data) {
     return (
@@ -25,7 +39,7 @@ const Cell: FC<Props> = (props) => {
         border={1}
         borderColor="primary.500"
         p={5}
-        onPress={onPress}
+        onPress={handlePress}
         borderRadius={10}
       >
         <Circle size={30} />
@@ -43,15 +57,13 @@ const Cell: FC<Props> = (props) => {
       borderColor="primary.500"
       borderRadius={10}
       p={5}
-      onPress={onPress}
+      onPress={handlePress}
       backgroundColor={
-        winningCombination && winningCombination.includes(id)
-          ? `${data.side}.500`
-          : undefined
+        winningCombination.includes(Number(id)) ? `${data.side}.500` : undefined
       }
     >
       <Circle size={30} bgColor={`${data.side}.500`}>
-        <Text color="white">{data.size}</Text>
+        <Text color="white">{data.value}</Text>
       </Circle>
     </Pressable>
   );

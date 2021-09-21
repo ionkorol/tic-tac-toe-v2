@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Tic Tac Toe Remastered",
-    "slug": "tic-tac-toe-v2",
+    "name": "Tic Tac Toe 2.0",
+    "slug": "tic-tac-toe-2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,11 +16,17 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "digital.korol.tic-tac-toe-v2",
-      "buildNumber": "3"
+      "bundleIdentifier": "digital.korol.tic-tac-toe-2",
+      "buildNumber": "1",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-7199910147118397~3721003686"
+      },
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
+      }
     },
     "android": {
-      "package": "digital.korol.tttv2",
+      "package": "digital.korol.tic_tac_toe_2",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
