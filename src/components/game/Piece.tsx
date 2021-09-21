@@ -36,7 +36,7 @@ const Piece: FC<Props> = (props) => {
           data.available ? `${data.side}.500` : `${data.side}.300`
         }
         borderWidth={2}
-        borderColor={selected ? `${data.side}.300` : "secondary.500"}
+        borderColor={selected ? `white` : "secondary.500"}
       >
         <Text color="white">{data.value}</Text>
       </Circle>

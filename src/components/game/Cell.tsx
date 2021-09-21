@@ -62,7 +62,7 @@ const Cell: FC<Props> = (props) => {
         winningCombination.includes(Number(id)) ? `${data.side}.500` : undefined
       }
     >
-      <Circle size={30} bgColor={`${data.side}.500`}>
+      <Circle borderRadius={50} size={30} bgColor={`${data.side}.500`}>
         <Text color="white">{data.value}</Text>
       </Circle>
     </Pressable>
