@@ -20,9 +20,6 @@
       "buildNumber": "2",
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-7199910147118397~3721003686"
-      },
-      "infoPlist": {
-        "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
       }
     },
     "android": {
@@ -38,6 +35,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [],
+    "extra": {
+      "eas": {
+        "projectId": "faa9b8df-de72-46e4-a866-9ed3e7d7ee8a"
+      }
     }
   }
 }
