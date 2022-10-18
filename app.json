@@ -2,7 +2,7 @@
   "expo": {
     "name": "Tic Tac Toe 2.0",
     "slug": "tic-tac-toe-2",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
